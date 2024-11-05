@@ -25,12 +25,12 @@ body {
     h2 {
     color: #007a3e;
     }
-    .clothing {
+    .roupas {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     }
-    .clothing div {
+    .roupas div {
     width: 45%;
     padding: 20px;
     border: 2px solid #007a3e;

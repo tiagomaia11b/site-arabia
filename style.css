@@ -1,89 +1,91 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #004225; 
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  color: #d4f1b4; 
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.flag {
+  display: block;
+  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: #004225;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #d4f1b4;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #b8db9e;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
   h1 {
-    text-align: center;
-    color: #006400; 
     font-size: 3rem;
-    margin-bottom: 20px;
   }
-  
+
   .flag {
-    display: block;
-    margin: 0 auto 20px;
-    width: 100%;
     max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .menu {
-    display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-top: 30px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
   .menu a {
-    text-decoration: none;
-    color: #006400; 
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 8px 16px;
   }
-  
-  .menu a:hover {
-    color: #004d00; 
-    border-bottom: 2px solid #004d00;
-  }
-  
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    .flag {
-      max-width: 250px;
-    }
-  
-    .menu {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .menu a {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .menu a {
-      font-size: 1rem;
-    }
-  }
+}
   

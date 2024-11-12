@@ -4,88 +4,97 @@
   box-sizing: border-box;
 }
 
+/* Corpo principal */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #004225; 
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: url('https://www.visateam.pt/wp-content/uploads/2018/12/Arabia-Saudita_1500x800-1.jpg') no-repeat center center fixed; /* Imagem de fundo */
+  background-size: cover;
   color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha ao topo da página */
+  text-align: center;
+  flex-direction: column; /* Coloca o conteúdo centralizado na vertical */
+}
+
+/* Estilo principal da página */
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  text-align: center;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  padding: 20px;
-}
-
-h1 {
-  font-family: 'Cinzel', serif;
-  color: #d4f1b4; 
-  font-size: 3.5rem;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
-.flag {
-  display: block;
-  margin: 0 auto 30px;
+  flex-direction: column;
   width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  text-align: center;
+  color: #fff;
 }
 
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.menu a {
-  display: inline-block;
-  text-decoration: none;
-  color: #004225;
-  font-weight: bold;
-  font-size: 1.2rem;
+/* Cabeçalho e navegação */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(45, 62, 80, 0.8);
   padding: 10px 20px;
-  background-color: #d4f1b4;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  z-index: 10; /* Garante que o cabeçalho fique sobre o conteúdo */
 }
 
-.menu a:hover {
-  background-color: #b8db9e;
-  transform: scale(1.05);
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: 2px solid #fff; /* Borda branca */
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  background-color: #3498db;
+  border-color: #3498db; /* Muda a cor da borda ao passar o mouse */
+}
+
+/* Contêiner do título */
+.title-container {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  margin-top: 80px; /* Coloca o título abaixo do header */
+}
+
+/* Título */
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Amiri', serif; /* Fonte árabe */
+  margin-bottom: 40px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   h1 {
     font-size: 3rem;
   }
 
-  .flag {
-    max-width: 300px;
+  nav {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .menu {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .menu a {
+  nav a {
     font-size: 1rem;
-    padding: 8px 16px;
+    padding: 12px 20px;
   }
 }
-  

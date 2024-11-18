@@ -1,27 +1,115 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    }
-    header nav {
-    background-color: #007a3e;
-    padding: 10px;
+    background-color: #f0f0f0; 
+    color: #333; 
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #444; 
+    padding: 10px 0;
     text-align: center;
-    }
-    header nav a {
-    color: #f4f4f4;
-    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    }
-    main {
-    padding: 20px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #bbb; 
+  }
+  
+  main {
+    width: 90%;
     max-width: 800px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 5px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: 'Cinzel', serif;
+    color: #222; 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666; 
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .imagens {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .imagens a {
+    width: 48%;
+  }
+  
+  .imagens img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: block; 
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      padding: 15px;
     }
+  
     h2 {
-    color: #007a3e;
+      font-size: 2rem;
     }
-    
+  
+    .imagens {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imagens a {
+      width: 100%;
+    }
+  
+    .imagens img {
+      max-width: 100%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
